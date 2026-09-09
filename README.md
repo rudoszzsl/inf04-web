@@ -1,4 +1,4 @@
-# INF.04 - aplikacje webowe
+# INF.04 - wersja z gałęzi
 
 Repozytorium z zadaniami przedmiotu.
 Zawiera notatki z lekcji oraz zadania do oceny.
