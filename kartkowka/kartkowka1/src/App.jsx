@@ -1,8 +1,6 @@
 import { useRef } from 'react'
 import { Pozycja } from './components/Pozycja';
 
-const komunikatBledu = "Nieprawidłowy numer zawodu";
-
 function App() {
   const imieRef = useRef(null);
   const numerRef = useRef(null);
@@ -17,6 +15,21 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    const imie = imieRef.current.value;
+    const numerZawodu = numerRef.current.value;
+
+    console.log(`Imię i nazwisko: ${imie}`);
+    console.log(`Numer: ${numerZawodu}`);
+
+
+    const index = Number(numerZawodu) - 1;
+    if(zawody[index] !== undefined){
+      console.log(zawody[index]);
+    }
+    else{
+      console.log("Nieprawidłowy numer zawodu");
+    }
   }
 
   return (
@@ -31,7 +44,7 @@ function App() {
 
       <form onSubmit={handleSubmit}>
         <div className='mb-3'>
-          <label className='form-label'>Numer zawodu:</label>
+          <label className='form-label'>Imię i nazwisko:</label>
           <input ref={imieRef} className='form-control' type='text' ></input>
         </div>
         <div className='mb-3'>
