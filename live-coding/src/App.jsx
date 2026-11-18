@@ -10,7 +10,7 @@ function App() {
 
   const widoczne = aktywnyGatunek === 'wszystkie' ? ksiazki : ksiazki.filter(k => k.gatunek === aktywnyGatunek);
 
-  function przelaczUlubiona(id){
+  function przelaczUlubiona(id){  
     setKsiazki(ksiazki.map(k => (k.id === id ? {...k, ulubiona: !k.ulubiona} : k)))
   }
 
