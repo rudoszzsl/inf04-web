@@ -3,7 +3,7 @@ import './App.css'
 
 function App() {
   const [tytul, setTytul] = useState('');
-  const [rodzaj, setRodzaj] = useState('');
+  const [rodzaj, setRodzaj] = useState('');;
 
   function handleSubmit(e){
     e.preventDefault();
